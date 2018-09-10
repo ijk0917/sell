@@ -1,0 +1,41 @@
+spring:
+  datasource: 
+    url: jdbc:mysql://127.0.0.1:3306/sell?characterEncoding=UTF-8&serverTimezone=GMT%2B8&useSSL=false
+    username: root
+    password: He123<
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    show_sql: true
+  jackson: 
+    default-property-inclusion: non_null 
+  redis:
+    database: 0
+    host: 192.168.0.112
+    port: 6379
+    pool:
+      max-active: 8  
+      max-wait: -1  
+      max-idle: 8  
+      min-idle: 0  
+      timeout: 3000 
+    
+server:
+  context-path: /sell
+  
+#logging:
+# pattern:
+# console : "%d - %msg%n"
+  
+wechat:
+  mpAppId: wx93734849913bedbe
+  mpAppSecret: 293b41783e4e5a1f2fe01148c20e09d4
+  mchId: 
+  mchKey: 
+  keyPath: 
+
+logging:
+  level:
+    com.imooc.sell.dataobject.mapper: trace
+    
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
